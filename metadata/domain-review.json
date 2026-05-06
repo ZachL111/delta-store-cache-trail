@@ -1,0 +1,73 @@
+{
+  "repo": "delta-store-cache-trail",
+  "language": "Swift",
+  "category": "Databases",
+  "goal": "Develop a Swift command-oriented project for cache scenarios with deny and allow fixtures, explainable decision traces, and local-only command execution.",
+  "review_model": {
+    "terms": [
+      "index fit",
+      "join width",
+      "constraint risk",
+      "plan drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "index fit",
+      "signal": 42,
+      "slack": 27,
+      "drag": 14,
+      "confidence": 79,
+      "score": 148,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "join width",
+      "signal": 68,
+      "slack": 27,
+      "drag": 26,
+      "confidence": 91,
+      "score": 176,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "constraint risk",
+      "signal": 54,
+      "slack": 53,
+      "drag": 19,
+      "confidence": 81,
+      "score": 185,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "plan drift",
+      "signal": 50,
+      "slack": 33,
+      "drag": 31,
+      "confidence": 79,
+      "score": 119,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "index fit",
+      "signal": 67,
+      "slack": 38,
+      "drag": 19,
+      "confidence": 91,
+      "score": 206,
+      "lane": "ship"
+    }
+  ]
+}
